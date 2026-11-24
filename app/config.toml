@@ -1,0 +1,27 @@
+# Study app settings. Restart the app after changing these.
+
+[scheduling]
+# Days until a concept comes back, by box. Box 0 = still learning (comes back this session).
+intervals_days = [0, 1, 3, 7, 14, 30, 60]
+# A concept counts as "solid" from this box up.
+solid_box = 3
+# Cram mode: no time rules. A concept you get right keeps coming back this session (as a
+# different variant) until it's solid, and the luck check doesn't need two different days.
+# Set back to false after the exam to get normal spaced review.
+cram = true
+# New concepts stop being added while this many concepts are in box 0 (missed / not yet stable).
+new_concept_cap = 10
+# When reviews are waiting, introduce at most one new concept every this many questions.
+new_every = 3
+# A missed concept comes back between this many questions later...
+requeue_min = 3
+requeue_max = 10
+
+[exam]
+# Exam mode: number of questions and time limit in minutes.
+questions = 90
+minutes = 90
+
+[server]
+port = 8765
+open_browser = true
